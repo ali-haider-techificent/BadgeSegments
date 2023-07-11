@@ -58,6 +58,12 @@ public class BadgeSegments: UIControl {
         }
     }
     
+    public func removeBadgeNumber(inIndex index: Int) {
+        if let bi = self.stackView.arrangedSubviews as? [SegmentItemView] {
+            bi[index].badgeNumber = 0
+        }
+    }
+    
    public func setSelected(inIndex index: Int){
         
         if let bi = self.stackView.arrangedSubviews as? [SegmentItemView] {

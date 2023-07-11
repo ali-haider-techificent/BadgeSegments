@@ -16,7 +16,7 @@ class ViewController: UIViewController, BadgeSegmentDelegate {
 
 
         let items = [SegmentItem(title: "New Messages",isSelected: false,badgeNumber: -1,font: UIFont (name: "NexaRegular", size: 16)),
-                     SegmentItem(title: "Messages",isSelected: true,badgeNumber: -1,font: UIFont (name: "NexaRegular", size: 16))]
+                     SegmentItem(title: "Messages",isSelected: true,font: UIFont (name: "NexaRegular", size: 16))]
         badgeSegment.appearence = .underlined
         badgeSegment.delegate = self
         badgeSegment.setUpSegments(with: items)
@@ -28,8 +28,11 @@ class ViewController: UIViewController, BadgeSegmentDelegate {
     
     
     @IBAction func changeValues(_ sender: Any) {
-        badgeSegment.setTitle(inIndex: 0, title: "hello")
         badgeSegment.setBadgeNumber(inIndex: 1, badgeNum: 12)
+    }
+    
+    @IBAction func removeBadge(_ sender: Any) {
+        badgeSegment.removeBadgeNumber(inIndex: 0)
     }
     
 }

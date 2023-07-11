@@ -69,8 +69,8 @@ class SegmentItemView: UIView {
         badgeLabel.translatesAutoresizingMaskIntoConstraints = false
         badgeLabel.heightAnchor.constraint(equalToConstant: 12.0).isActive = true
         badgeLabel.widthAnchor.constraint(equalToConstant: 12.0).isActive = true
-        badgeLabel.topAnchor.constraint(equalTo: self.topAnchor,constant: -5).isActive = true
-        badgeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        badgeLabel.topAnchor.constraint(equalTo: self.topAnchor,constant: 2).isActive = true
+        badgeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -20).isActive = true
         badgeLabel.backgroundColor = .red
         badgeLabel.layer.cornerRadius = 6
         badgeLabel.clipsToBounds = true

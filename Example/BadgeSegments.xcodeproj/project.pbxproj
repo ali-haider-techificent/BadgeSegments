@@ -151,7 +151,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 4WQNG7UP85;
+						DevelopmentTeam = RC58KT93UC;
 						LastSwiftMigration = 1030;
 					};
 				};
@@ -379,7 +379,7 @@
 			baseConfigurationReference = 82666D1D96CFD82A4E0FC8CD /* Pods-BadgeSegments_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4WQNG7UP85;
+				DEVELOPMENT_TEAM = RC58KT93UC;
 				INFOPLIST_FILE = BadgeSegments/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -395,7 +395,7 @@
 			baseConfigurationReference = AB25F25AB9473E40BDA195B4 /* Pods-BadgeSegments_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4WQNG7UP85;
+				DEVELOPMENT_TEAM = RC58KT93UC;
 				INFOPLIST_FILE = BadgeSegments/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
