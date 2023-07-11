@@ -22,6 +22,7 @@ public class BadgeSegments: UIControl {
             setUpView()
         }
     }
+    
     fileprivate var selectedIndex: Int = 0
     var titleColor: UIColor = .black
     var underlineColor: UIColor = .black
@@ -96,6 +97,7 @@ public class BadgeSegments: UIControl {
             badgeItemView.isSelected = item.isSelected
             badgeItemView.setUpSubviews()
             badgeItemView.badgeNumber = item.badgeNumber
+            badgeItemView.segmentFont = item.font
             badgeItemView.labelTappedHandler = {
                 if let bi = self.stackView.arrangedSubviews as? [SegmentItemView] {
                     bi.forEach({

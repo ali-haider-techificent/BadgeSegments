@@ -15,11 +15,18 @@ class SegmentItemView: UIView {
             if badgeNumber == 0 {
                 badgeLabel.isHidden = true
             }else {
-                badgeLabel.text = String(badgeNumber)
+                badgeLabel.text = badgeNumber == -1 ? "" : String(badgeNumber)
                 badgeLabel.isHidden = false
             }
         }
     }
+    
+    public var segmentFont:UIFont?{
+        didSet{
+            self.titleLabel.font = segmentFont
+        }
+    }
+    
    fileprivate var selectorView = UIView()
     
    fileprivate var titleLabel = UILabel()
@@ -60,12 +67,12 @@ class SegmentItemView: UIView {
         
         //badge label Constraints and property setup
         badgeLabel.translatesAutoresizingMaskIntoConstraints = false
-        badgeLabel.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
-        badgeLabel.widthAnchor.constraint(equalToConstant: 20.0).isActive = true
+        badgeLabel.heightAnchor.constraint(equalToConstant: 12.0).isActive = true
+        badgeLabel.widthAnchor.constraint(equalToConstant: 12.0).isActive = true
         badgeLabel.topAnchor.constraint(equalTo: self.topAnchor,constant: -5).isActive = true
         badgeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         badgeLabel.backgroundColor = .red
-        badgeLabel.layer.cornerRadius = 10
+        badgeLabel.layer.cornerRadius = 6
         badgeLabel.clipsToBounds = true
         badgeLabel.textAlignment = .center
         badgeLabel.font = .systemFont(ofSize: 11)

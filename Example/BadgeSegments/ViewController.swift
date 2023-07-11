@@ -15,12 +15,12 @@ class ViewController: UIViewController, BadgeSegmentDelegate {
         super.viewDidLoad()
 
 
-        let items = [SegmentItem(title: "first",isSelected: false,badgeNumber: 1),
-                     SegmentItem(title: "second",isSelected: true),
-                     SegmentItem(title: "third",isSelected: false,badgeNumber: 12)]
+        let items = [SegmentItem(title: "New Messages",isSelected: false,badgeNumber: -1,font: UIFont (name: "NexaRegular", size: 16)),
+                     SegmentItem(title: "Messages",isSelected: true,badgeNumber: -1,font: UIFont (name: "NexaRegular", size: 16))]
         badgeSegment.appearence = .underlined
         badgeSegment.delegate = self
         badgeSegment.setUpSegments(with: items)
+        badgeSegment.setSelected(inIndex: 0)
     }
     func didSelectSegment(with index: Int) {
         print(index)
@@ -29,9 +29,7 @@ class ViewController: UIViewController, BadgeSegmentDelegate {
     
     @IBAction func changeValues(_ sender: Any) {
         badgeSegment.setTitle(inIndex: 0, title: "hello")
-        badgeSegment.setSelected(inIndex: 2)
         badgeSegment.setBadgeNumber(inIndex: 1, badgeNum: 12)
     }
     
 }
-
